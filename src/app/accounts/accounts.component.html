@@ -1,0 +1,26 @@
+<table class="table table-dark">
+    <thead>
+       <tr>
+        <th>S.no.</th>
+        <th>Account Name</th>
+        <th>Available Balance</th>
+        <th>Account Number</th>
+        <th>City</th>
+        <th>Profile Picture</th>
+        <th>Ifsc Code</th>
+        <th>ID</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td>{{account.profie_picture}}</td>
+            <td>{{account.ifsc_code}}</td>
+            <td>{{account.id}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    outline: none;
+}
+.left{
+    width: 15%;
+    height: 100%;
+    background-color: rgb(133, 108, 75);
+    color: white;
+    overflow: auto;
+
+    
+}
+.top{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    
+}
+.bottom{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+   
+
+}
+button{
+    width: 130px;
+    height: 40px;
+    background-color: red;
+    color: rgb(217, 217, 221);
+}
+hr{
+    width: 90%;
+    height: 2px;
+    background-color: rgb(81, 81, 108);
+}
+.right{
+    width: 85%;
+    height: 100%;
+    background-image: linear-gradient(to right,rgb(3, 73, 99), rgb(156, 102, 102), rgb(245, 221, 143));
+    overflow: auto;
+    
+}

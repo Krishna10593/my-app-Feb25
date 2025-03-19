@@ -1,0 +1,32 @@
+.parent{
+    width: 40%;
+    height: 50%;
+    background-image: linear-gradient(to right, rgb(39, 124, 193),rgb(248, 190, 18),rgb(237, 39, 174));
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 150px;
+    border-radius: 25%;
+    background-color: rgb(108, 138, 77);
+    padding: 10px;
+    
+}
+label{
+    font-weight: bold;
+    color: rgb(108, 39, 39);
+}
+button{
+    background-color: blue;
+    color: white;
+}
+input{
+    width: 30%;
+    height: 25px;
+    border-radius: 10px;
+    color: chocolate;
+}
+h1{
+    color: white;
+}
+h3{
+    color: white;
+}

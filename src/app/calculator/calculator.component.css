@@ -1,0 +1,28 @@
+
+.parent{
+    width: 30%;
+    height: 40%;
+    margin-left: 500px;
+    background-color: #609696;
+    margin-top: 200px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10%;
+
+   }
+   button{
+    width: 50px;
+    height: 20px;
+    background-color: blue;
+    margin: 8px;
+    color: rgb(247, 241, 241);
+
+   }
+   input{
+    width: 60%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: burlywoodng ;
+   }
+   

@@ -1,0 +1,12 @@
+<h1>Flipkart</h1>
+
+<div class="bodyMain">
+    <div id="parent" *ngFor="let flipkarts of flipkart">
+       <div class="d1"><img class="i1" [src]="flipkarts.image" alt=""></div>
+        <div class="d2">{{flipkarts.category}}</div><br>
+        <div class="d3">{{flipkarts.title | slice:0:50}}</div><br>
+        <div class="d4">Rs.{{flipkarts.price}}</div><br>
+        <div class="d5">{{flipkarts.rating.rate}}*</div>
+        </div>
+    </div>
+

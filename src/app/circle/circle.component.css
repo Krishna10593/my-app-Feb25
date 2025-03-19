@@ -1,0 +1,30 @@
+.parent{
+    width: 30%;
+    height: 60%;
+    background-color: #c3c018;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 50%;
+    margin-left: 300px;
+    margin-top: 100px;
+    
+}
+input{
+    width: 60%;
+    height: 8%;
+    margin: 20px;
+    background-color: rgb(191, 144, 144);
+    border-radius: 50%;
+}
+button{
+    width: 40%;
+    height: 8%;
+    margin: 8px;
+    background-color: rgb(206, 105, 33);
+    font-weight: bold;
+    border-radius: 50%;
+}
+label{
+    font-weight: bold;
+}

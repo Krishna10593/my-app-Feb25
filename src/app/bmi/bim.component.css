@@ -1,0 +1,29 @@
+.parent{
+    width: 40%;
+    height: 60%;
+    background-color: #af27ac;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+input{
+    width: 60%;
+    height: 8%;
+    margin: 20px;
+    background-color: rgb(105, 40, 165);
+}
+button{
+    width: 40%;
+    height: 8%;
+    margin: 8px;
+    background-color: rgb(7, 1, 13);
+    font-weight: bold;
+    color: white;
+}
+label{
+    font-weight: bold;
+}

@@ -1,0 +1,10 @@
+<div class="parent">
+    <h2>Rectangle</h2>
+    <label>Length:</label>
+    <input type="number" [(ngModel)]="num1"><br>
+    <label>Breadth:</label>
+    <input type="number" [(ngModel)]="num2"><br>
+    <button (click)="area()" [disabled]="!num1 || !num2">Area</button><br>
+    <button (click)="perimeter()" [disabled]="!num1 || !num2">Perimeter</button><br><br><br><br><br>
+    <label style="font-size: xx-large;">Area:{{areares}} , Perimeter: {{perimeterres}}</label>
+</div>
