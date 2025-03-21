@@ -14,7 +14,7 @@ import { CircleComponent } from './circle/circle.component';
 import { BimComponent } from './bmi/bim.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CelFarnhtComponent } from './cel-farnht/cel-farnht.component';
 import { SimpleintComponent } from './simpleint/simpleint.component';
 import { EmicalComponent } from './emical/emical.component';
@@ -23,6 +23,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +49,20 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
     PinterestComponent,
     AccountsComponent,
     FlipkartComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    CreateVehicleComponent,
+    CreateAccountComponent,
+    StudentsComponent,
+    CreateStudentComponent,
+    CreateUserComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule  
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

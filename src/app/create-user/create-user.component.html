@@ -1,0 +1,62 @@
+
+<div class="container">
+<h3>User Form:</h3>
+<form [formGroup]="userForm">
+<label>Name:</label>
+<input class="hi" type="text" formControlName="name"><br>
+<label>Email:</label>
+<input type="text" class="hi" formControlName="name"><br>
+<label>Password:</label>
+<input type="text" class="hi" formControlName="name"><br>
+<label>Mobile:</label>
+<input type="number" class="hi" formControlName="name"><br>
+
+<div formGroupName="address">
+<label>City:</label>
+<input type="text" class="hi" formControlName="city"><br>
+<label>State:</label>
+<input type="text" class="hi" formControlName="state"><br>
+<label>Pincode:</label>
+<input type="number" class="hi" formControlName="pincode"><br>
+</div>
+
+
+<label>Type:</label>
+<input type="radio" name="type" class="hi" formControlName="type" value="dayScholar">
+<label>Day Scholar</label>
+<input type="radio" name="type" class="hi" formControlName="type"  value="residential">
+<label>Residential</label>
+
+<div *ngIf="userForm.get('type')?.value=='dayScholar'">
+<label>Bus Fee:</label>
+<input type="number" class="hi" formControlName="busFee">br
+</div>
+
+<div *ngIf="userForm.get('type')?.value=='residential'">
+    <label>Hostel Fee:</label>
+    <input type="number" class="hi" formControlName="hostelFee">
+</div><br>
+
+<button (click)="submit()" class="btn btn-primary">Submit</button>
+
+<label>Cards:</label>
+<button (click)="addcard()" class="btn btn-warning">Add Card</button><br><br>
+<div formArrayName="cards">
+    <div *ngFor="let card of cardsFormArray.controls; let i=index">
+    <div formGroupName="{{i}}">
+        <h3>card{{i+1}}</h3>
+        <label>Number:</label>
+        <input type="number" formControlName="number"><br>
+        <label>Expiry:</label>
+        <input type="month" formControlName="expiry"><br>
+        <label>CVV:</label>
+        <input type="number" formControlName="cvv"><br>
+        <button (click)="deletecard(i)" class="btn btn-danger">Remove Card</button>
+
+    </div>
+
+    </div>
+</div>
+</form>
+
+</div>

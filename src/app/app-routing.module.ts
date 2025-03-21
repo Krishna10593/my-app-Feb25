@@ -17,6 +17,13 @@ import { EmicalComponent } from './emical/emical.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+
 
 const routes: Routes = [
   {path: "", component:LoginComponent},  //default routing
@@ -33,7 +40,13 @@ const routes: Routes = [
       {path:"emical", component:EmicalComponent},
       {path:"pinterest", component:PinterestComponent},
       {path:"accounts", component:AccountsComponent},
-      {path:"flipkart", component:FlipkartComponent}
+      {path:"flipkart", component:FlipkartComponent},
+      {path:"vehicles", component:VehiclesComponent},
+      {path:"create-vehicle", component:CreateVehicleComponent},
+      {path:"create-account", component:CreateAccountComponent},
+      {path:"students", component:StudentsComponent},
+      {path:"create-student", component:CreateStudentComponent},
+      {path:"create-user", component:CreateUserComponent}
     ]
   },   //Parent routing
   

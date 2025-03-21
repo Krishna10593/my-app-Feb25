@@ -1,0 +1,17 @@
+<div class="container">
+<form [formGroup]="studentForm">
+    <label>NAME:</label>
+    <input type="name" formControlName="name"><br>
+    <label>PHONE:</label>
+    <input type="text" formControlName="phone"><br>
+    <label>CITY:</label>
+    <input type="text" formControlName="city"><br>
+    <label>EMAIL:</label>
+    <input type="text" formControlName="email"><br>
+    <label>DOB:</label>
+    <input type="number" formControlName="dob"><br>
+    <label>SCHOOL NAME:</label>
+    <input type="text" formControlName="school_name"><br>
+    <button (click)="createStudent()" class="btn btn-primary">CREATE</button>
+</form>
+</div>

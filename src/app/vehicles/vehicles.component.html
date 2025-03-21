@@ -1,1 +1,55 @@
-<p>vehicles works!</p>
+<h1>Vehicles</h1>
+<input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Enter the search text">
+
+<select [(ngModel)]="column">
+    <option>vehicle</option>
+    <option>cost</option>
+    <option>fuel</option>
+    <option>colour</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>   
+</select>
+<button (click)="sort()">Sort</button>
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>   
+</select>
+<button (click)="pagination()">Pagination</button>
+
+<button routerLink="/dashboard/create-vehicle">CreateVehicle</button>
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+        <th>S.No.</th>
+        <th>vehicle name</th>
+        <th>colour</th>
+        <th>cost</th>
+        <th>fuel</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>
+                <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>

@@ -1,0 +1,70 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.container{
+    width: 30%;
+    height: 45%;
+    background-color: white;
+    border-radius: 20px;
+   
+ }
+ .top{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .topleft{
+    width: 30%;
+    height: 100%;
+}
+.topright{
+    width: 70%;
+    height: 100%;
+    margin: 5px;
+    color: rgb(241, 166, 68);
+    
+}
+ .bottom{
+    width: 100%;
+    height: 55%;
+  
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .bottomleft{
+    width: 30%;
+    height: 100%;
+    
+ }
+ .i1{
+   width: 97.5%;
+   height: 100%;
+
+ }
+ .i2{
+   width: 100%;
+   height: 100%;
+
+ }
+ .bottomright{
+    width: 70%;
+    height: 100%;
+    color: rgb(45, 59, 5);
+    margin: 10px;
+ }
+h3{
+   color: rgb(251, 5, 5);
+}
+.bottomright1{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   justify-content: space-between;
+}

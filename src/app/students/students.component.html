@@ -1,0 +1,70 @@
+<div class="parent">
+    <h3>
+<input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Enter the search here">
+<label>SortColumn:</label>
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>phone</option>
+    <option>city</option>
+    <option>email</option>
+    <option>dob</option>
+    <option>school_name</option>
+</select>
+<label>SortOrder:</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()" class="btn btn-primary">Sort</button>
+
+
+<label>limit:</label>
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+</select>
+<label>page:</label>
+<select  [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagination()" class="btn btn-primary">Pagination</button>
+ </h3><br>
+ <button routerLink="/dashboard/create-student" class="btn btn-secondary">CreateStudent</button>
+ <hr>
+
+
+    <div class="container" *ngFor="let students of student">
+    <div class="top">
+        <div class="topleft"><img class="i1" [src]="students.school_logo" alt=""> </div>
+        <div class="topright">
+            <h4>School name: {{students.school_name | slice:0:50}} </h4>
+            <label>City of School: {{students.school_city}}</label> <br>
+            <label>Pin code: {{students.school_pin}}</label>
+        </div>
+    </div>
+    <div class="bottom">
+
+        <div class="bottomleft"> <img class="i2" [src]="students.profile_picture" alt=""> </div>
+        <div class="bottomright">
+            <label>NAME: {{students.name}}</label><br>
+            <label>DOB: {{students.dob}}</label><br>
+            <label>CITY: {{students.city}}</label><br>
+            <label>PHONE: {{students.phone}}</label><br>
+            <label>EMAIL: {{students.email}}</label>
+            <div class="bottomright1">
+                <button style="background-color: darkgray;">View</button>
+                <button style="background-color:cadetblue;">Edit</button>
+                <button style="background-color:red;">Delete</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
