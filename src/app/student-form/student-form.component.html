@@ -1,0 +1,65 @@
+<div id="parent">
+    <h1>Student-Form:</h1>
+<form [formGroup]="studentForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name"><br>
+    <label>Class:</label>
+    <input type="text" formControlName="class"><br>
+    <label>Father Name:</label>
+    <input type="text" formControlName="fathername"><br>
+    <label>Email:</label>
+    <input type="text" formControlName="email"><br>
+    <label>DOB:</label>
+    <input type="date" formControlName="dob"><br>
+
+    
+    <div formGroupName="address">Address:
+    <label>AddreLiness:</label>
+    <input type="text" formControlName="addressline"><br>
+    <label>City:</label>
+    <input type="text" formControlName="city"><br>
+    <label>State:</label>
+    <input type="text" formControlName="state"><br>
+    <label>Pincode:</label>
+    <input type="number" formControlName="pincode"><br>
+    </div><br>
+    
+    <label>Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar">
+    <label>DayScholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label><br>
+
+    <div *ngIf="studentForm.get('type')?.value=='dayScholar'">   
+        <label>BusFee:</label>
+        <input type="number" formControlName="busFee">
+    </div>
+    <div *ngIf="studentForm.get('type')?.value=='residential'">
+        <label>HostelFee:</label>
+        <input type="number" formControlName="hostelFee">
+    </div>
+     <br>
+    
+     <label>Marks:</label>
+     <button (click)="addMark()" class="btn btn-warning">Add Marks</button>
+     <div formArrayName="marks">
+        <div *ngFor="let mark of marksFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h2>mark{{i+1}}</h2>
+                <label>Class:</label>
+                <input type="text" formControlName="class"><br>
+                <label>Year:</label>
+                <input type="date" formControlName="year"><br>
+                <label>Percentage:</label>
+                <input type="number" formControlName="percentage"><br>
+                <button (click)="deletemark(i)" class="btn btn-danger">Remove mark</button>
+            </div>
+
+        </div>
+
+     </div>
+
+     <br>
+    <button (click)="submit()" class="btn btn-outline-warning">Submit</button>
+</form>
+</div>

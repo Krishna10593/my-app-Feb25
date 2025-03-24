@@ -1,0 +1,67 @@
+<h5>Vehicle data:</h5>
+<input  (keyup)="filter()" type="text" [ngModel]="term" placeholder="Enter text here">
+
+<!-- Sort -->
+ <select [(ngModel)]="column">
+    <option>Vehicle</option>
+    <option>model</option>
+    <option>type</option>
+    <option>fuel</option>
+    <option>color</option>
+    <option>cost</option>
+    <option>tyre</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">Sort</button>
+
+<!-- Pagination -->
+ <select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+ </select>
+ <select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+ </select>
+ <button (click)="pagination()">Pagination</button>
+
+
+
+
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>VehicleName</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Cost</th>
+            <th>Tyre</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.tyres}}</td>
+            <th>
+                <button (click)="delete(vehicle.id)" class="btn btn-danger" >Delete</button>
+            </th>
+        </tr>
+    </tbody>
+</table>

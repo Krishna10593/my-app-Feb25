@@ -2,11 +2,14 @@
     width: 50%;
     height: 100%;
     background-color: antiquewhite;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     margin-top: 30px;
     
 }
 .hi{
     margin: 20px;
+}
+p{
+    color: red;
 }

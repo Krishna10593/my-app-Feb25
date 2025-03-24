@@ -15,7 +15,7 @@ export class FlipkartComponent {
         console.log(data);
         this.flipkart=data;
       },(err:any)=>{
-        alert("Internal server error")
+        alert("Internal server error");
       }
       )
 

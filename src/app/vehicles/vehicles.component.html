@@ -1,5 +1,9 @@
 <h1>Vehicles</h1>
+
+<!-- Filtering -->
 <input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Enter the search text">
+
+<!-- Sorting -->
 
 <select [(ngModel)]="column">
     <option>vehicle</option>
@@ -12,6 +16,8 @@
     <option>desc</option>   
 </select>
 <button (click)="sort()">Sort</button>
+
+<!-- pagination -->
 <select [(ngModel)]="limit">
     <option>10</option>
     <option>20</option>
@@ -24,6 +30,8 @@
     <option>3</option>   
 </select>
 <button (click)="pagination()">Pagination</button>
+
+<!-- Routing to create vehicle page -->
 
 <button routerLink="/dashboard/create-vehicle">CreateVehicle</button>
 

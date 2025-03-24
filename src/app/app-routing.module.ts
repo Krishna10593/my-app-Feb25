@@ -23,6 +23,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { StudentsComponent } from './students/students.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { AutomobilesComponent } from './automobiles/automobiles.component';
 
 
 const routes: Routes = [
@@ -46,7 +48,10 @@ const routes: Routes = [
       {path:"create-account", component:CreateAccountComponent},
       {path:"students", component:StudentsComponent},
       {path:"create-student", component:CreateStudentComponent},
-      {path:"create-user", component:CreateUserComponent}
+      {path:"create-user", component:CreateUserComponent},
+      {path:"student-form", component:StudentFormComponent},
+      {path:"pintrest", component:PinterestComponent},
+      {path:"automobiles", component:AutomobilesComponent}
     ]
   },   //Parent routing
   

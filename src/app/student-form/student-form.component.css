@@ -1,0 +1,12 @@
+#parent{
+    width: 50%;
+    height: 80%;
+    background-color: rgb(205, 113, 132);
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 25px;
+    text-align: left;
+    padding: 20px;
+    overflow: auto;
+   
+}

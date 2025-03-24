@@ -4,6 +4,11 @@
 <form [formGroup]="userForm">
 <label>Name:</label>
 <input class="hi" type="text" formControlName="name"><br>
+<div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+    <p *ngIf="userForm.get('name')?.errors?.['required']">*Name is required</p>
+    <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name should be minimum 6 chars</p>
+    <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name should be maximum 12 chars</p>
+</div>
 <label>Email:</label>
 <input type="text" class="hi" formControlName="name"><br>
 <label>Password:</label>

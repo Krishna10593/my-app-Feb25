@@ -65,7 +65,7 @@ this._vehicleService.deleteVehicles(id).subscribe(
   }
 )
   }else{
-    alert("You have cancelled")
+    alert("You have cancelled");
   }
  }
  pagination(){

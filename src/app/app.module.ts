@@ -28,6 +28,9 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { StudentsComponent } from './students/students.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { PintrestComponent } from './pintrest/pintrest.component';
+import { AutomobilesComponent } from './automobiles/automobiles.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { CreateUserComponent } from './create-user/create-user.component';
     CreateAccountComponent,
     StudentsComponent,
     CreateStudentComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    StudentFormComponent,
+    PintrestComponent,
+    AutomobilesComponent
     
   ],
   imports: [
