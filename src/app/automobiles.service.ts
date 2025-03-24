@@ -25,6 +25,8 @@ export class AutomobilesService {
   }
 
   deleteAutomobiles(id:any):Observable<any>{
-    return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction="+id);
+    return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
   }
+
+  
 }
