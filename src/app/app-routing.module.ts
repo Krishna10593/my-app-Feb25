@@ -29,6 +29,10 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { WeatherComponent } from './weather/weather.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 
 const routes: Routes = [
@@ -60,7 +64,11 @@ const routes: Routes = [
       {path:"automobiles", component:AutomobilesComponent},
       {path:"vehicle-details/:id", component:VehicleDetailsComponent},
       {path: "weather", component:WeatherComponent},
-      {path:"student-details/:id", component:ViewStudentComponent}
+      {path:"student-details/:id", component:ViewStudentComponent},
+      {path:"sibling1", component:Sibling1Component},
+      {path:"parent", component:ParentComponent},
+      {path:"textarea", component:TextAreaComponent}
+      
     ]
   },   //Parent routing
   
