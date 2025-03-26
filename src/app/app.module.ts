@@ -32,6 +32,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { PintrestComponent } from './pintrest/pintrest.component';
 import { AutomobilesComponent } from './automobiles/automobiles.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     StudentFormComponent,
     PintrestComponent,
     AutomobilesComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    WeatherComponent,
+    ViewStudentComponent
     
   ],
   imports: [

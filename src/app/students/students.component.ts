@@ -13,16 +13,10 @@ export class StudentsComponent {
   order:string="";
   limit:string="";
   page:string="";
+  id:string="";
 
   constructor(private _studentService:StudentsService) {
-    _studentService.getStudent().subscribe(
-      (data:any)=>{
-        console.log(data);
-        this.student=data;
-      },(err:any)=>{
-        alert("Internal server error");
-      }
-    )
+   this.loadStudent();
   }
 
   filter(){
@@ -55,5 +49,30 @@ export class StudentsComponent {
       }
     )
   }
+
+  loadStudent(){
+    this._studentService.getStudent().subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.student=data;
+      },(err:any)=>{
+        alert("Internal server error");
+      }
+    )
+  }
+  delete(id:any){
+    if(confirm("Are you sure wanted to delete?")==true){
+    this._studentService.deleteStudent(id).subscribe(
+      (data:any)=>{
+        alert("You have successfully deleted the record");
+        this.loadStudent();
+      },(err:any)=>{
+      alert("Internal server error");
+      }
     
+    )
+  }else{
+      alert("You have cancelled");
+  }
+  }
 }

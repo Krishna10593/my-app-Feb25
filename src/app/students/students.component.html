@@ -56,9 +56,11 @@
             <label>PHONE: {{students.phone}}</label><br>
             <label>EMAIL: {{students.email}}</label>
             <div class="bottomright1">
-                <button style="background-color: darkgray;">View</button>
-                <button style="background-color:cadetblue;">Edit</button>
-                <button style="background-color:red;">Delete</button>
+                <button style="background-color: darkgray;" routerLink="/dashboard/student-details/{{students.id}}">View</button>
+
+                <button style="background-color:cadetblue;" routerLink="/dashboard/edit-student/{{students.id}}">Edit</button>
+
+                <button style="background-color:red;" (click)="delete(students.id)">Delete</button>
             </div>
         </div>
         

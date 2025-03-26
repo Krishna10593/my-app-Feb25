@@ -27,7 +27,7 @@ export class CreateVehicleComponent {
         alert("Internal server error");
       }
     )
-    if(this.id)
+    if(this.id){
     _vehicleService.getVehicle(this.id).subscribe(
       (data:any)=>{
         console.log(data);
@@ -36,6 +36,7 @@ export class CreateVehicleComponent {
         alert("Internal server error");
       }
     )
+  }
     
   }
 

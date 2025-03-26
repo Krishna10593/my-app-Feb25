@@ -26,11 +26,14 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { AutomobilesComponent } from './automobiles/automobiles.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { WeatherComponent } from './weather/weather.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { ViewStudentComponent } from './view-student/view-student.component';
 
 
 const routes: Routes = [
   {path: "", component:LoginComponent},  //default routing
-  {path:"dashboard", component:DashboardComponent, children:
+  {path:"dashboard", component:DashboardComponent, canActivate:[AuthenticationGuard], children:
     [{path:"welcome",component:WelcomeComponent},
       {path:"calculator", component:CalculatorComponent},
       {path:"rectangle", component:RectangleComponent},
@@ -44,17 +47,20 @@ const routes: Routes = [
       {path:"pinterest", component:PinterestComponent},
       {path:"accounts", component:AccountsComponent},
       {path:"flipkart", component:FlipkartComponent},
-      {path:"vehicles", component:VehiclesComponent},
+      {path:"vehicles", component:VehiclesComponent, canActivate:[AuthenticationGuard]},
       {path:"create-vehicle", component:CreateVehicleComponent},
-      {path:"edit-vehicle/:id", component:CreateVehicleComponent},
+      {path:"edit-vehicle/:id", component:CreateVehicleComponent},  //here we are reusing the create-vehicle method to editvehicle
       {path:"create-account", component:CreateAccountComponent},
       {path:"students", component:StudentsComponent},
       {path:"create-student", component:CreateStudentComponent},
+      {path: "edit-student/:id", component:CreateStudentComponent},
       {path:"create-user", component:CreateUserComponent},
       {path:"student-form", component:StudentFormComponent},
       {path:"pintrest", component:PinterestComponent},
       {path:"automobiles", component:AutomobilesComponent},
-      {path:"vehicle-details/:id", component:VehicleDetailsComponent}
+      {path:"vehicle-details/:id", component:VehicleDetailsComponent},
+      {path: "weather", component:WeatherComponent},
+      {path:"student-details/:id", component:ViewStudentComponent}
     ]
   },   //Parent routing
   
