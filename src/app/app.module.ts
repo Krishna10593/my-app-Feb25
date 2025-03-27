@@ -42,6 +42,7 @@ import { RatingComponent } from './rating/rating.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { TextEntryComponent } from './text-entry/text-entry.component';
 import { CapitalDirectiveDirective } from './capital-directive.directive';
+import { BalancePipe } from './balance.pipe';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { CapitalDirectiveDirective } from './capital-directive.directive';
     RatingComponent,
     TextAreaComponent,
     TextEntryComponent,
-    CapitalDirectiveDirective
+    CapitalDirectiveDirective,
+    BalancePipe
     
   ],
   imports: [
