@@ -3,7 +3,7 @@
 <h3>User Form:</h3>
 <form [formGroup]="userForm">
 <label>Name:</label>
-<input class="hi" type="text" formControlName="name"><br>
+<input class="hi" type="text" formControlName="name" appCapitalDirective><br>
 <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
     <p *ngIf="userForm.get('name')?.errors?.['required']">*Name is required</p>
     <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name should be minimum 6 chars</p>
