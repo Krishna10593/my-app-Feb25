@@ -41,6 +41,7 @@ import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { TextEntryComponent } from './text-entry/text-entry.component';
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { TextEntryComponent } from './text-entry/text-entry.component';
     ChildComponent,
     RatingComponent,
     TextAreaComponent,
-    TextEntryComponent
+    TextEntryComponent,
+    EmailComponent
     
   ],
   imports: [
