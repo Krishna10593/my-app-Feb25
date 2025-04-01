@@ -10,7 +10,14 @@
     <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name should be maximum 12 chars</p>
 </div>
 <label>Email:</label>
-<input type="text" class="hi" formControlName="name"><br>
+
+<input type="text" class="hi" formControlName="email">
+<div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+    <p *ngIf="userForm.get('email')?.errors?.['required']">*Email is required</p>
+    <p *ngIf="userForm.get('email')?.errors?.['minlength']">Email should be minimum 6 chars</p>
+    <p *ngIf="userForm.get('email')?.errors?.['maxlength']">Email should be maximum 12 chars</p>
+    <p *ngIf="userForm.get('email')?.errors?.['GoogleMail']">Please Enter Google mail only</p>
+</div><br>
 <label>Password:</label>
 <input type="text" class="hi" formControlName="name"><br>
 <label>Mobile:</label>
@@ -34,7 +41,7 @@
 
 <div *ngIf="userForm.get('type')?.value=='dayScholar'">
 <label>Bus Fee:</label>
-<input type="number" class="hi" formControlName="busFee">br
+<input type="number" class="hi" formControlName="busFee">
 </div>
 
 <div *ngIf="userForm.get('type')?.value=='residential'">

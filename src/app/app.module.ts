@@ -19,7 +19,7 @@ import { CelFarnhtComponent } from './cel-farnht/cel-farnht.component';
 import { SimpleintComponent } from './simpleint/simpleint.component';
 import { EmicalComponent } from './emical/emical.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
@@ -42,6 +42,9 @@ import { RatingComponent } from './rating/rating.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { TextEntryComponent } from './text-entry/text-entry.component';
 import { EmailComponent } from './email/email.component';
+import { EmployeedataComponent } from './employeedata/employeedata.component';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,8 @@ import { EmailComponent } from './email/email.component';
     RatingComponent,
     TextAreaComponent,
     TextEntryComponent,
-    EmailComponent
+    EmailComponent,
+    EmployeedataComponent
     
   ],
   imports: [
@@ -90,9 +94,16 @@ import { EmailComponent } from './email/email.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

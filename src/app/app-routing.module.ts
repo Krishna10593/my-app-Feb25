@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -33,6 +33,8 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { EmployeedataComponent } from './employeedata/employeedata.component';
+import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 
 
 const routes: Routes = [
@@ -43,7 +45,7 @@ const routes: Routes = [
       {path:"rectangle", component:RectangleComponent},
       {path:"circle", component:CircleComponent},
       {path:"bim", component:BimComponent},
-      {path:"logout", component:LogoutComponent},
+      // {path:"logout", component:LogoutComponent},
       {path:"data-binding", component:DataBindingComponent},
       {path:"cel-farnht", component:CelFarnhtComponent},
       {path:"simpleint", component:SimpleintComponent}, 
@@ -53,7 +55,7 @@ const routes: Routes = [
       {path:"flipkart", component:FlipkartComponent},
       {path:"vehicles", component:VehiclesComponent, canActivate:[AuthenticationGuard]},
       {path:"create-vehicle", component:CreateVehicleComponent},
-      {path:"edit-vehicle/:id", component:CreateVehicleComponent},  //here we are reusing the create-vehicle method to editvehicle
+      {path:"edit-vehicle/:id", component:CreateVehicleComponent},  //here we are reusing the create-vehicle method to editvehicle and create-vehicle
       {path:"create-account", component:CreateAccountComponent},
       {path:"students", component:StudentsComponent},
       {path:"create-student", component:CreateStudentComponent},
@@ -67,18 +69,21 @@ const routes: Routes = [
       {path:"student-details/:id", component:ViewStudentComponent},
       {path:"sibling1", component:Sibling1Component},
       {path:"parent", component:ParentComponent},
-      {path:"textarea", component:TextAreaComponent}
+      {path:"textarea", component:TextAreaComponent},
+      {path:"Employeedata", component:EmployeedataComponent},
+      {path:"about-ceo", component:AboutCeoComponent},
+      {path: 'payments',
+        loadChildren: () =>import('./payments/payments.module').then(m=> m.PaymentsModule)
+      }
       
     ]
   },   //Parent routing
   
   {path:"login", component:LoginComponent},
+  {path:"logout", component:LogoutComponent},
   {path:"payment", component:PaymentComponent},
   {path:"**", component:Error404Component} //wild-card router
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+
 export class AppRoutingModule { }

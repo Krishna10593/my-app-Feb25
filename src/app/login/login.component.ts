@@ -26,5 +26,11 @@ login(){
       alert("Internal server error");
     }
   )
+  
 }
+// logout(){
+//   sessionStorage.removeItem("token");
+//   this._router.navigateByUrl("");
+// }
+
 }

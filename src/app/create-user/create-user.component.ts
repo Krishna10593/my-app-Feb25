@@ -1,6 +1,7 @@
 import { getLocaleNumberFormat } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { googleMail } from '../accounts/validators';
 
 @Component({
   selector: 'app-create-user',
@@ -10,7 +11,8 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 export class CreateUserComponent {
 public userForm:FormGroup=new FormGroup({
   name:new FormControl('',[Validators.required, Validators.minLength(6), Validators.maxLength(12)]),
-  email:new FormControl(),
+  email:new FormControl('',[Validators.required, Validators.minLength(6), Validators.maxLength(12), googleMail]),
+  
   password:new FormControl(),
   mobile:new FormControl(),
   address:new FormGroup({
@@ -21,7 +23,7 @@ public userForm:FormGroup=new FormGroup({
 type:new FormControl(),
 // busFee.new FormControl(),
 // hostelFee.new FormControl()
-cards: new FormArray([]),
+cards: new FormArray([])
 })
 constructor(){
   this.userForm.get('type')?.valueChanges.subscribe(

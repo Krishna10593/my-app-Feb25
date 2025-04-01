@@ -18,7 +18,8 @@ export class CreateVehicleComponent {
   
   id:number=0;
 
-  constructor(private _vehicleService:VehiclesService, private _router:Router, private _activatedRoute:ActivatedRoute){
+  constructor(private _vehicleService:VehiclesService, private _router:Router, 
+    private _activatedRoute:ActivatedRoute){
     _activatedRoute.params.subscribe(
       (data:any)=>{
         console.log(data.id);
@@ -36,11 +37,8 @@ export class CreateVehicleComponent {
         alert("Internal server error");
       }
     )
-  }
-    
-  }
-
-  
+  }    
+  }  
     create(){
      if(this.id){
       console.log(this.vehicleForm.value);
@@ -66,16 +64,8 @@ export class CreateVehicleComponent {
         }
       )
 
-     }
-
-
-
-
-
-
-
-    
-    
+     }  
+  
   }
 
 }
