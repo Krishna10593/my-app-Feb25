@@ -45,6 +45,7 @@ import { EmailComponent } from './email/email.component';
 import { EmployeedataComponent } from './employeedata/employeedata.component';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     TextAreaComponent,
     TextEntryComponent,
     EmailComponent,
-    EmployeedataComponent
+    EmployeedataComponent,
+    LifeCycleHooksComponent
     
   ],
   imports: [
