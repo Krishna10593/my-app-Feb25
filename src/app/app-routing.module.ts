@@ -35,6 +35,7 @@ import { ParentComponent } from './parent/parent.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { EmployeedataComponent } from './employeedata/employeedata.component';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 
 const routes: Routes = [
@@ -72,6 +73,8 @@ const routes: Routes = [
       {path:"textarea", component:TextAreaComponent},
       {path:"Employeedata", component:EmployeedataComponent},
       {path:"about-ceo", component:AboutCeoComponent},
+      {path:"logout", component:LogoutComponent},
+      {path:"life-cycle-hooks", component:LifeCycleHooksComponent},
       {path: 'payments',
         loadChildren: () =>import('./payments/payments.module').then(m=> m.PaymentsModule)
       }
@@ -85,5 +88,8 @@ const routes: Routes = [
   {path:"**", component:Error404Component} //wild-card router
 ];
 
-
+@NgModule({
+  imports:[RouterModule.forRoot(routes)],
+  exports:[RouterModule]
+})
 export class AppRoutingModule { }
